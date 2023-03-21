@@ -11,7 +11,7 @@ const ProjectDesc = (props) => {
           <img src={gh} alt='Github Logo' />
           <div className='a-text'>Repo</div>
         </a>
-        <a href={(`${props.project.liveLink}`, '_blank')}>
+        <a onClick={() => window.open(`${props.project.liveLink}`, '_blank')}>
           <img className='globe-icon' src={globe} alt='Globe icon' />
           <div className='a-text'>Live Site</div>
         </a>
