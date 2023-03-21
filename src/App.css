@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Tajawal&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  font-family: 'Tajawal', sans-serif;
+  background: url('./assets/sky.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  margin: 1rem;
+  font-family: 'Gloock', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.intro-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-container {
+  width: 55vw;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.52);
+  border-radius: 10px;
+}
+
+.intro-name {
+  display: flex;
+  gap: 1rem;
+}
+
+.intro-hi {
+  transform: translate(100vw, 150vh);
+  animation: intro 2s ease-out forwards;
+}
+.intro-im {
+  transform: translate(100vw, -150vh);
+  animation: intro 2s ease-out forwards;
+}
+.intro-charlie {
+  transform: translate(-100vw, -30vh);
+  animation: intro 2s ease-out forwards;
+}
+
+@keyframes intro {
+  0% {
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.type-animation {
+  animation: hidden-type 2.5s linear;
+}
+
+.intro-p {
+  animation: hidden-p 2s forwards;
+  animation-delay: 5.5s;
+  visibility: hidden;
+  padding: 0px 10px;
+}
+
+.desc-buttons {
+  display: flex;
+}
+
+.intro-buttons a,
+.desc-buttons a {
+  background-color: rgb(238, 255, 126);
+  transition: transform 0.3s ease-in-out;
+  margin: 10px 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+}
+
+.intro-buttons {
+  display: flex;
+  animation: hidden-p 2s forwards;
+  animation-delay: 12s;
+  visibility: hidden;
+}
+
+.intro-buttons a:hover,
+.desc-buttons a:hover {
+  transform: scale(1.1, 1.1);
+  border: 0;
+  cursor: pointer;
+  color: black;
+}
+
+.download-cv {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.down-arrow {
+  color: white;
+  width: 2rem;
+  margin-top: 10px;
+}
+
+.globe-icon {
+  width: 1.5rem;
+}
+
+.a-text {
+  padding-top: 5px;
+}
+
+.recent-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  border: 1px solid rgb(238, 255, 126);
+  color: rgb(238, 255, 126);
+  animation: hidden-p 2s forwards;
+  animation-delay: 12s;
+  visibility: hidden;
+}
+
+.recent-btn:hover {
+  border: inherit;
+  transform: scale(1.1, 1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid rgb(238, 255, 126);
+}
+
+.video {
+  width: 45vw;
+  height: auto;
+}
+
+.project-container {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+  padding: 50px 30px;
+  background-color: rgba(0, 0, 0, 0.52);
+}
+
+.project-description {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .video {
+    width: 90vw;
+  }
+
+  .intro-container {
+    width: 90vw;
+  }
+
+  .project-description {
+    margin: 10px;
+  }
+  .project-container {
+    margin: 20px 0px;
+    padding: 0px;
+
+    flex-direction: column;
+  }
+  .quiverchat-video {
+    order: 1;
+  }
+}
+
+@keyframes hidden-p {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes hidden-type {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
